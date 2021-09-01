@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP:wght@200&display=swap')
+/*
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-family: 'Noto Serif JP', serif;
+    */
+$sidebarPadding: 1rem
+$textColor1: rgb(235,223,212)
+$borderSet: 1px solid $textColor1
+
+*
+    font-family: 'Noto Serif JP', serif
+    margin: 0
+    padding: 0
+
+body
+    overflow-x: hidden
+    /*background-image: url('images/bg2.jpg')*/
+    
+    .display-menus-container
+        width: 100vw
+        height: 100vh
+        z-index: 5
+        position: fixed
+        background: white
+        display: none
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        overflow: hidden
+
+    .display-menu-item
+        display: none
+        ul
+            display: grid
+            grid-template: auto auto / auto auto
+            margin: 1rem
+        .close-menu
+            background: white
+            position: relative
+            padding: 1rem
+            border: $borderSet
+            cursor: pointer
+
+
+
+    #trigger1
+        display: none
+    .header 
+        position: fixed
+        height: 10vh
+        width: 100vw
+        display: flex
+        justify-content: space-between
+        z-index: 10
+        .bars
+            cursor: pointer
+            display: grid
+            align-content: center
+            margin-left: .25rem
+            margin-top: 1rem
+            padding: 5px
+            background: black
+            border: 1px solid $textColor1
+            
+        .bar
+            background: $textColor1
+            height: 5px
+            width: 50px
+        .bar1, .bar2
+            margin-bottom: .25rem
+            
+        .logo
+            height: 10vh
+            margin-top: 1rem
+        
+                
+    .desktop-header
+        display: none
+    
+    .mobile-menu
+        position: fixed
+        left: -5000px
+        z-index: 5
+        width: 100vw
+        height: 100vh
+        display: flex
+        flex-direction: column
+        
+        .mobile-links-container
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-items: center
+            align-items: center
+            background: black
+            
+            .exit-mobile
+                color: $textColor1
+                font-size: 2rem
+                width: 100vw
+                text-align: right
+                padding-right: 2rem
+                cursor: pointer
+
+            .mobile-link
+                font-size: 3rem
+                flex: 1
+                width: 100%
+                color: $textColor1
+                text-decoration: none
+                padding-left: 1rem
+                
+        
+    .banner
+        overflow-x: hidden
+        width: 100vw
+
+        .banner-text
+            align-content: end
+            position: absolute
+            color: $textColor1
+            display: grid
+            width: 100%
+            height: 100%
+            justify-content: left
+            font-size: 2rem
+            left: 50px
+            bottom: 50px
+            
+            .banner-name
+                background: black
+                padding: 1rem
+
+        .banner-text-bg
+            align-content: center
+            position: absolute
+            color: $textColor1
+            display: grid
+            height: 100%
+            width: 100%
+            justify-content: center
+
+            .frost
+                display: none
+                background: white
+                opacity: .2
+                height: 50vh
+                width: 50vh
+                border-radius: 50%
+                filter: blur(1px)
+                border: 1px solid white
+
+        .cookbanner-container
+            height: 100vh
+            width: 100vw
+            background: black
+        
+        .cookbanner
+            object-fit: contain
+            height: 100%
+            width: 100%
+            display: block
+        
+    .bottom-wrapper
+        .desc
+            background: black
+            color: $textColor1
+            line-height: 2em
+            padding: 2rem
+            .desc-paragraph-container, .desc-paragraph-item
+                font-family: 'Noto Sans JP', sans-serif
+
+            .desc-header
+                font-size: 3rem
+
+            .desc-paragraph-container
+                margin-top: 3rem
+                display: grid
+
+            .desc-paragraph-item
+                margin: 1rem
+
+            .desc-link
+                color: $textColor1
+
+        .menus, .images
+            color: $textColor1
+
+        .images
+            height: 30vh
+            padding: 5rem
+            font-size: 1.5rem
+
+        .menufloat
+            width: 100vw
+            position: relative
+            display: block
+            height: 100vh
+
+            .menu-title
+                position: absolute
+                color: $textColor1
+                font-size: 2em
+                width: 100%
+                height: 100%
+                display: grid
+                justify-content: center
+                align-content: end
+
+                h1
+                    margin-bottom: 1rem
+                    margin-left: 1rem
+                    margin-right: 1rem
+            .menupic
+                width: 100%
+                height: 100%
+                display: block
+                object-fit: cover
+            
+    .footer
+        color: $textColor1
+        background: black
+        .footer-wrapper
+            display: grid
+            grid-template: auto auto / auto
+
+            .footer-logo    
+                height:50px
+                justify-self: center
+                margin-top: 1rem
+
+            .footer-nav
+                display: flex
+                
+
+                .footer-nav-container
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 1rem
+
+                    .footer-link
+                        text-decoration: none
+                        font-size: 2rem
+                        color: $textColor1
+        .footer-social
+            height: 10vh
+            display: flex
+            justify-content: space-between
+            border-top: $borderSet
+
+            .footer-social-container
+                border-right: $borderSet
+                display: flex
+                width: 25%
+                justify-content: center
+                align-items: center
+                
+                .footer-link
+                    margin: 1rem
+                    text-decoration: none
+                    color: $textColor1
+                    border: $borderSet
+                    padding: .2rem
+                
+            .reservations-container
+                border-left: $borderSet
+                width: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                text-align: center
+                font-size: 1.2rem
+                padding-left: 1rem
+
+@media only screen and (min-width: 840px)
+    
+    
+    body .header
+        display: none
+
+    body .desktop-header
+        display: flex
+        position: fixed
+        z-index: 5
+        height: 10vh
+        background: black
+        width: 100vw
+        justify-content: space-between
+
+        .desktop-links-container
+            display: flex
+            height: 10vh
+            align-items: center
+            justify-content: space-around
+
+            .desktop-link
+                text-decoration: none
+                color: $textColor1
+                font-size: 2rem
+                margin: 0 1rem
+
+        .desktop-logo-container
+            height: 10vh
+            color: $textColor1
+            font-family: 'Noto Sans JP', sans-serif
+            display: grid
+            justify-content: center
+            align-content: center
+            .desktop-logo
+                padding: 10px
+                font-family: 'Noto Sans JP', sans-serif
+        
+            
+
+    .banner
+        background: black
+        display: flex
+        justify-content: right
+        width: 100vw
+        height: 100vh
+
+        .banner-name
+            font-size: 3rem
+            color: $textColor1
+            background: black
+
+    
+        
+    .desc
+        background: black
+        height: 70vh
+        display: grid
+        align-content: center
+
+        .desc-paragraph-container
+            grid-template: auto / auto auto
+
+    .menus
+        display: flex
+        text-align: center
+        
+        .menufloat
+            box-shadow: 5px 5px 10px black
+            height: 75vh !important
+            display: block
+            
+            .menupic
+                object-fit: cover 
+                display: block
+                
+
+        .menu1, .menu2, .menu3
+            margin-right: 1rem
+
+        .menu1
+            margin-left: 1rem
+            top: 50px
+        .menu2, .menu4
+            top: -50px
+        .menu3
+            top: 50px
+
+        .menu4
+            margin-right: 1rem
+        
+    .footer
+        background: black
+
+        .footer-wrapper
+            border: none
+            padding-top: 5rem
+    
+
+    
+
+    
+    
+        
+    
